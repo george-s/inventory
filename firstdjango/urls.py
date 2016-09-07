@@ -5,9 +5,14 @@ from Inventory import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+    url(r'^countdown/', views.countdown, name='countdown'),
+    url(r'^countdownjs/', views.countdownjs, name='countdownjs'),
     url(r'^item/(?P<id>\d+)/', views.item_detail, name='item_detail'),
     url(r'^admin/', include(admin.site.urls)),
 ]
 
+
 urlpatterns += staticfiles_urlpatterns()
+
+
 

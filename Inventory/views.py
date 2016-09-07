@@ -19,4 +19,15 @@ def item_detail(request, id):
         		'item': item,
         	})
 
+def countdown(request):
+	    return render(request, 'Inventory/countdown.html',{
+        		
+        	})
+
+def countdownjs(request):
+	    return render(request, 'Inventory/countdownjs.html',{
+        		
+        	})
+
+
 

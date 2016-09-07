@@ -6,11 +6,38 @@
 	<title>Inventory Project</title>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="{% static 'main.css' %}">
+	<link rel="stylesheet" href="{% static 'countdown.css' %}">
 	</head>	
 		<body>
 			{% block content %}
 			{% endblock content %}
+<br><br><br>
+			<a href="{%url 'countdown' %}"> countdown</a>
+			<a href="{%url 'countdownjs' %}"> countdownjs</a>
 			<script src="{% static 'main.js' %}"></script>
+			
+
+
+
+
+
+			<script src="{% static 'jquery-2.1.3.min.js' %}"></script>
+			<script src="{% static 'jquery.plugin.min.js' %}"></script>
+			<script src="{% static 'jquery.countdown.min.js' %}"></script>
+			<script src="{% static 'clock.js' %}"></script>
+			<div class="my-countdown"></div>
+			
+
+
+			
+
+
+
+
+
+
+
+
 		</body>
 </html>
 
