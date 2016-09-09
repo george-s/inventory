@@ -1,7 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404
-
 from Inventory.models import Item
+import Inventory.targetProcess
+import requests
+import json
+
+
+
 def index(request):
 	items = Item.objects.exclude(amount=0)
 	#return HttpResponse('<p>In index view </p>')
@@ -19,9 +24,11 @@ def item_detail(request, id):
         		'item': item,
         	})
 
-def countdown(request):
-	    return render(request, 'Inventory/countdown.html',{
-        		
+def tprequests(request):
+	    tp = Inventory.targetProcess.Target_Process('http://unmarkedtek.tpondemand.com/api/v1/','MTp6bDlMT3R6NS9mMEpqMDBLRkhoVFBWSXZMa2hLMktUYWRzTkNYc3IxYm0wPQ==')
+	    result = tp.get_objects_as_et('Requests')
+	    return render(request, 'Inventory/tprequests.html',{
+        	'result': result,	
         	})
 
 def countdownjs(request):
