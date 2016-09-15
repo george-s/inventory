@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Inventory',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -53,6 +54,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'firstdjango.urls'
+
 
 TEMPLATES = [
     {
@@ -69,6 +71,12 @@ TEMPLATES = [
         },
     },
 ]
+
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.app_directories.load_template_source',
+)
+
 
 WSGI_APPLICATION = 'firstdjango.wsgi.application'
 
@@ -99,7 +107,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.8/howto/static-files/
+# https://docs.djangoproject.com/en/1.8/howxx   to/static-files/
 
 
 
@@ -111,3 +119,5 @@ STATICFILES_DIRS = (
 STATICFILES_ROOT = (
     os.path.join(BASE_DIR, 'firstdjango', 'static'),
 )
+
+

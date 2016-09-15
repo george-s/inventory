@@ -3,7 +3,7 @@ print "HELLO"
 import base64 
 import urllib2 
 import urllib 
-import xml.etree.ElementTree as ET
+import xml.etree.cElementTree as ET
 
 class Target_Process(): 
     def __init__(self, tp_name, access_token): 
@@ -25,3 +25,4 @@ class Target_Process():
 		txt = response.read()
 		root = ET.fromstring(txt)
 		return root
+

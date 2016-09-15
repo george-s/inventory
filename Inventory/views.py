@@ -7,6 +7,7 @@ import json
 
 
 
+
 def index(request):
 	items = Item.objects.exclude(amount=0)
 	#return HttpResponse('<p>In index view </p>')
@@ -30,6 +31,9 @@ def tprequests(request):
 	    return render(request, 'Inventory/tprequests.html',{
         	'result': result,	
         	})
+
+
+
 
 def countdownjs(request):
 	    return render(request, 'Inventory/countdownjs.html',{
