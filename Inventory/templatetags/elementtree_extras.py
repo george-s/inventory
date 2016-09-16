@@ -18,14 +18,6 @@ def tostringgetname(elem):
         return elem
     return elem.attrib['Name']
 
-def tonamelist(elem):
-	"Serialize element structure to XHTML."
-	if not ET.iselement(elem):
-		return elem
-		list = []
-		for child in elem:
-			list =  child.attrib['Name']
-
 # result = tp.get_objects_as_et('UserStories')
 # print result
 # for child in result:
@@ -35,4 +27,3 @@ def tonamelist(elem):
 
 register.filter(tostring)
 register.filter(tostringgetname)
-register.filter(tonamelist)
