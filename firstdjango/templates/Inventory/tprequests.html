@@ -7,6 +7,11 @@
 <title>test</title>
 
 <head></head>
-
+{% for item in result %}
+<p>{{ item |tostringgetname}}</p>
+{%  endfor %}
+<br>
+<br>
+<br>
 {{ result|tostring }}
 </html>
